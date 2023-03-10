@@ -1,0 +1,244 @@
+@import 'normalize.scss'
+@import 'reset.scss'
+
+// ИМПОРТИРУЕМ NORMALIZE И RESET
+
+$boxShadow: rgba(0, 0, 0, 0.08)
+
+body 
+	font-family: 'Proxima Nova Condensed', sans-serif
+	font-size: 16px
+	color: #444
+
+a
+	text-decoration: none
+	color: inherit
+
+
+section
+	padding: 50px 0
+
+.container
+	max-width: 290px
+
+	margin: 0 auto
+
+/* HEADER */
+.header
+	width: 100%
+	max-width: 290px
+
+	margin: 0 auto
+	padding: 16px 5px 15px
+	border: 0.5px solid #D9D9D9
+
+	&__logo
+		display: block
+		width: 125px
+
+		margin-bottom: 16px
+		& img 
+			width: 100%
+			height: 100%
+			display: block
+
+	/* NAV */
+	&__nav
+		& ul
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			& li
+				width: fit-content
+				&:not(:nth-child(even))
+					margin-right: 10px
+				&:not(:nth-last-child(-n+2))
+					margin-bottom: 5px
+				& a
+					font-size: 14px
+					font-weight: 500
+
+.intro
+	padding: 0
+
+	.intro--container
+		height: 298px
+
+		background: url(../img/bg.png) center / cover no-repeat
+		padding: 40px 5px 0
+		margin-bottom: 10px
+
+	&__offer
+		& h1
+			font-size: 28px
+			line-height: 100%
+			font-weight: 500
+
+			margin-bottom: 20px
+
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+
+		width: 110px
+		height: 32px
+
+		font-weight: 500
+		border-radius: 8px
+		background-color: #B01736
+		color: #fff
+
+
+/* ABOUT */
+.about
+
+	&__description
+		padding: 24px 5px
+		box-shadow: 0 0 16px $boxShadow
+		margin: 0 auto 48px
+
+	.text 
+		font-weight: 500
+		line-height: 120%
+		text-align: center
+		& span
+			color: #B01736
+
+	&__stats
+		max-width: 264px
+
+		margin: 0 auto
+
+		& ul
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+
+
+	&__items
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		margin-bottom: 24px
+
+	&__value
+		font-size: 40px
+		font-weight: 500
+		line-height: 80%
+
+		margin-bottom: 7px
+		color: #A30C33
+
+	&__value-description
+		text-align: center
+		line-height: 120%
+
+
+
+
+
+
+@media (min-width: 1250px)
+	section
+		padding: 100px 0
+
+	.container
+		max-width: 1250px
+
+	/* HEADER */
+	.header
+		max-width: 1250px
+
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		padding: 30px 70px 29px
+
+		&__logo
+			margin-bottom: 0
+
+		/* NAV */
+		&__nav
+			height: fit-content
+			& ul
+				max-width: 688px
+				& li
+					&:not(:last-child)
+						margin: 0 20px 0 0 !important
+					& a
+						font-size: 18px
+
+
+	/* INTRO */
+	.intro
+
+		.intro--container
+			max-width: 1250px
+			height: 600px
+
+			display: flex
+			align-items: center
+
+			padding: 0 0 0 70px
+			margin-bottom: 0
+
+		&__offer
+			max-width: 709px
+			& h1
+				font-size: 56px
+
+				margin-bottom: 60px
+		&__btn
+			height: 56px
+
+		
+	/* ABOUT */
+	.about
+
+		&__description
+			max-width: 1110px
+
+			padding: 99px 110px
+			margin-bottom: 98px
+
+		.text
+			font-size: 32px
+
+		&__stats
+			max-width: 889px
+			& ul
+				justify-content: start
+
+				padding: 0 0 0 5px
+		
+		&__items
+			align-items: flex-start
+			&:nth-child(1)
+				margin-right: 185px
+			&:nth-child(2)
+				margin-right: 185px
+			&:nth-child(4)
+				margin:0 184px 0 143px
+			&:not(:nth-last-child(-n+2))
+				margin-bottom: 85px
+
+
+		&__value
+			font-size: 80px
+
+			margin-bottom: 4px
+		
+		&__value-description
+			font-size: 18px
+			line-height: 130%
+			text-align: left
+
+
+
+
+
+
+
