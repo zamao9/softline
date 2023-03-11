@@ -4,6 +4,8 @@
 // ИМПОРТИРУЕМ NORMALIZE И RESET
 
 $boxShadow: rgba(0, 0, 0, 0.08)
+$bgColor: rgba(45, 54, 83, 0.6)
+$shapeBg: rgba(0, 0, 0, 0.05)
 
 body 
 	font-family: 'Proxima Nova Condensed', sans-serif
@@ -22,6 +24,15 @@ section
 	max-width: 290px
 
 	margin: 0 auto
+	padding: 0 5px
+
+.container__header
+	margin-bottom: 15px
+
+.title 
+	font-size: 28px
+	font-weight: 600
+	text-align: center
 
 /* HEADER */
 .header
@@ -56,7 +67,7 @@ section
 					margin-bottom: 5px
 				& a
 					font-size: 14px
-					font-weight: 500
+					font-weight: 600
 
 .intro
 	padding: 0
@@ -72,7 +83,7 @@ section
 		& h1
 			font-size: 28px
 			line-height: 100%
-			font-weight: 500
+			font-weight: 600
 
 			margin-bottom: 20px
 
@@ -84,7 +95,7 @@ section
 		width: 110px
 		height: 32px
 
-		font-weight: 500
+		font-weight: 600
 		border-radius: 8px
 		background-color: #B01736
 		color: #fff
@@ -92,14 +103,15 @@ section
 
 /* ABOUT */
 .about
+	padding-bottom: 25px
 
 	&__description
-		padding: 24px 5px
+		padding: 24px 0
 		box-shadow: 0 0 16px $boxShadow
 		margin: 0 auto 48px
 
 	.text 
-		font-weight: 500
+		font-weight: 600
 		line-height: 120%
 		text-align: center
 		& span
@@ -125,7 +137,7 @@ section
 
 	&__value
 		font-size: 40px
-		font-weight: 500
+		font-weight: 600
 		line-height: 80%
 
 		margin-bottom: 7px
@@ -136,6 +148,453 @@ section
 		line-height: 120%
 
 
+/* OFFICES */
+.offices
+	padding-top: 2px
+
+	&__container
+		padding: 0
+
+	&__header
+		position: relative
+
+	/* OFFICES FILTER */
+	.filter
+		display: flex
+		flex-direction: column
+
+		transition: 0.3s ease
+		box-shadow: 0 0 16px $boxShadow
+		padding: 18px 5px 0
+		&.active
+			box-shadow: none
+
+		&__head
+			position: relative
+			z-index: 3
+			display: flex
+			align-items: center
+
+			margin-bottom: 20px
+			& span
+				font-size: 20px
+				font-weight: 600
+
+				margin-right: 6px
+
+		&__arrow
+			position: relative
+			width: 20px
+			height: 8px
+
+			transition: 0.3s ease
+			&::before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				transform: translateY(-50%) rotate(40deg)
+
+				width: 60%
+				height: 2px
+
+				background-color: #444
+				transition: 0.3s ease
+			&::after
+				position: absolute
+				content: ''
+				top: 50%
+				right: 0
+				transform: translateY(-50%) rotate(-40deg)
+
+				width: 60%
+				height: 2px
+
+				background-color: #444
+				transition: 0.3s ease
+			&.active 
+				&::before
+					transform: translateY(-50%) rotate(-40deg)
+				&::after
+					transform: translateY(-50%) rotate(40deg)
+					
+				
+
+		&__body
+			display: flex
+			flex-wrap: nowrap
+			min-height: 37px
+
+			overflow-x: scroll
+
+		&__items
+			&:not(:last-child)
+				margin-right: 16px
+			& span
+				font-size: 14px
+				font-weight: 600
+				line-height: 16px
+				white-space: nowrap
+
+				padding-bottom: 18px
+			&.active span
+				color: #A30C33
+				border-bottom: 2px solid #A30C33
+
+	/* OFFICES ACCORDEON */
+	.accordeon
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+
+		opacity: 0
+		pointer-events: none
+		transition: 0.3s ease
+		padding: 53px 5px 18px
+		box-shadow: 0 0 16px $boxShadow
+		background-color: #fff
+		&.show
+			opacity: 1
+			pointer-events: all
+		&__list
+			display: grid
+			grid-template-columns: repeat(3, auto)
+			row-gap: 15px
+			column-gap: 5px
+		
+		&-items
+			width: fit-content
+
+			&__head
+				display: flex
+				align-items: center
+
+				transition: 0.3s ease
+				&.active
+					margin-bottom: 12px
+
+			&__span
+				font-family: 'Proxima Nova', sans-serif
+				font-size: 14px
+				font-weight: 600
+				white-space: nowrap
+
+				margin-right: 3px
+			&.active
+				color: #A30C33
+					
+			&__img
+				width: 9px
+				height: 5px
+
+				transition: 0.3s ease
+				& img
+					display: block
+					width: 100%
+					height: 100%
+
+					object-fit: cover
+				&.active
+					transform: rotate(180deg)
+
+			&__body
+				width: fit-content
+				max-height: 0
+				display: flex
+				flex-direction: column
+
+				transition: 0.3s ease
+				overflow: hidden
+
+			&__links
+				width: fit-content
+				&:not(:last-child)
+					margin-bottom: 12px
+
+
+	&__content
+		width: 100%
+		height: 422px
+		
+
+	&__map
+		display: none
+		width: 100%
+		height: 100%
+
+		position: relative
+
+		overflow-x: scroll
+		overflow-y: scroll
+		&.active
+			display: block
+		& img
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+
+			display: block
+			width: 100%
+			min-width: 862px
+			height: 100%
+
+			object-fit: contain
+			&:first-child
+				display: block
+			&:last-child
+				display: none
+
+
+/* MISSIONS */
+.missions
+	position: relative
+
+	overflow: hidden
+	padding: 32px 5px
+	background-color: #A30C33
+
+	&__content
+		display: flex
+		flex-direction: column
+
+	&__title
+		color: #fff
+
+		margin-bottom: 10px
+
+	&__text
+		line-height: 130%
+		text-align: center
+		color: #fff
+
+	&__bg
+		position: absolute
+		top: 21px
+
+		height: 153px
+		&:nth-child(2)
+			left: -48px
+		&:last-child
+			right: -34px
+		& img 
+			display: block
+			width: 100%
+			height: 100%
+
+
+/* WAYS */
+.ways
+	padding-bottom: 40px
+
+	&__content
+		display: grid
+		gap: 10px
+
+	&__items
+		position: relative
+
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+
+		width: 100%
+		height: 100%
+		& img
+			display: block
+			width: 100%
+			height: 100%
+
+			object-fit: cover
+		&::after
+			position: absolute
+			content: ''
+			z-index: 1
+			top: 0
+			left: 0
+
+			width: 100%
+			height: 100%
+
+			background-color: $bgColor
+
+	.wrapper
+		position: relative
+		z-index: 2
+
+		padding: 12px 5px 12px 10px
+
+		&__head
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			transition: 0.3s ease
+			&.active
+				margin-bottom: 20px
+			& span
+				max-width: 230px
+
+				font-size: 20px
+				font-weight: 600
+				color: #fff
+			
+		&__arrow
+			position: relative
+
+			width: 36px
+			height: 36px
+			&::before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(-45deg)
+
+				width: 12px
+				height: 12px
+
+				border-bottom: 2px solid #fff
+				border-left: 2px solid #fff
+				transition: 0.3s ease
+			&.active
+				&::before
+					transform: translate(-50%, -50%) rotate(135deg)
+
+
+
+
+		&__body
+			max-height: 0
+			
+			overflow: hidden
+			transition: 0.3s ease
+			& p 
+				line-height: 140%
+				color: #fff
+
+
+/* PACKAGE */
+.package
+	padding: 0
+
+	&__container
+		padding: 24px 0
+		box-shadow: 0 0 40px $boxShadow
+
+	&-cotainer__header
+		margin-bottom: 40px
+	
+	.additional-package-cotainer__header
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		margin-bottom: 25px
+		& span
+			font-size: 22px
+			text-align: center
+			line-height: 120%
+			font-weight: 600
+			color: #B01736
+
+	.additional-package__title
+		font-size: 22px
+		line-height: 120%
+		text-align: center
+
+		margin-bottom: 4px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+		margin-bottom: 23px
+
+	&__items
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		width: 120px
+		&:not(:nth-child(even))
+			margin-right: 10px
+		&:not(:last-child)
+			margin-bottom: 25px
+		&:last-child
+			margin-right: 0
+		& span
+			text-align: center
+			line-height: 110%
+
+	&__shape
+		width: 80px
+		height: 80px
+
+		display: flex
+		justify-content: center
+		align-items: center
+
+		background-color: $shapeBg
+		border-radius: 50%
+		margin-bottom: 10px
+
+	&__img
+		width: 35px
+		height: 35px
+		& img
+			display: block
+			width: 100%
+			height: 100%
+
+			object-fit: cover
+	.lti
+		width: 48px
+			
+	hr
+		max-width: 290px
+
+		margin: 0 auto 24px
+		border: 0
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1) 
+
+	.additional
+		margin-bottom: 0
+
+		&-items
+			width: 100px
+			&:not(:nth-child(even))
+				margin-right: 5px
+			&:last-child
+				margin-right: 0
+
+
+/* CORPORATE */
+.corporate
+	padding-top: 47px
+
+	&__nav
+		display: none
+
+
+	&__title
+		text-align: left
+
+	.swiper-slide
+		height: 210px !important
+		& img
+			display: block
+			width: 100%
+			height: 100%
+
+			object-fit: cover
+		
+	.swiper-pagination
+		display: none
 
 
 
@@ -146,6 +605,14 @@ section
 
 	.container
 		max-width: 1250px
+
+		padding: 0
+
+	.container__header
+		margin-bottom: 55px
+
+	.title
+		font-size: 56px
 
 	/* HEADER */
 	.header
@@ -159,6 +626,9 @@ section
 
 		&__logo
 			margin-bottom: 0
+			transition: 0.3s ease
+			&:hover
+				opacity: 0.6
 
 		/* NAV */
 		&__nav
@@ -170,6 +640,10 @@ section
 						margin: 0 20px 0 0 !important
 					& a
 						font-size: 18px
+
+						transition: 0.3s ease
+						&:hover
+							opacity: 0.6
 
 
 	/* INTRO */
@@ -194,9 +668,14 @@ section
 		&__btn
 			height: 56px
 
-		
+			transition: 0.3s ease
+			&:hover
+				background-color: #D43152
+
+
 	/* ABOUT */
 	.about
+		padding-bottom: 50px
 
 		&__description
 			max-width: 1110px
@@ -210,21 +689,36 @@ section
 		&__stats
 			max-width: 889px
 			& ul
-				justify-content: start
+				display: grid
+				grid-template-columns: repeat(5, 1fr)
+				grid-template-rows: repeat(2, 1fr)
+				row-gap: 37px
 
 				padding: 0 0 0 5px
-		
+				& li 
+					&:nth-child(1)
+						grid-column: 2 span
+					&:nth-child(2)
+						grid-column: 2 span
+						justify-self: center
+						padding-right: 49px
+					&:nth-child(3)
+						grid-column: 1 span
+						justify-self: end
+					&:nth-child(4)
+						grid-column: 2 span
+						justify-self: end
+						padding-right: 9px
+					&:nth-child(5)
+						grid-column: 3 span
+						justify-self: center
+						padding-left: 21px
+
 		&__items
 			align-items: flex-start
-			&:nth-child(1)
-				margin-right: 185px
-			&:nth-child(2)
-				margin-right: 185px
-			&:nth-child(4)
-				margin:0 184px 0 143px
-			&:not(:nth-last-child(-n+2))
-				margin-bottom: 85px
 
+
+			
 
 		&__value
 			font-size: 80px
@@ -237,8 +731,301 @@ section
 			text-align: left
 
 
+	/* OFFICES */
+	.offices
+		padding-top: 22px
+
+		.filter
+			flex-direction: row
+			justify-content: space-between
+			align-items: baseline
+
+			padding: 30px 70px 0
+			margin-bottom: 85px
+
+			&__head
+				margin-bottom: 0
+				& span
+					font-size: 24px
+					cursor: pointer
+
+					margin-right: 14px
+
+			&__arrow
+				&::before,
+				&::after
+					height: 3px
+
+			&__body
+				min-height: 52px
+				justify-content: space-between
+
+				transition: 0.3s ease
+				overflow: auto
+				&.active
+					pointer-events: none
+					opacity: 0.1
+
+			&__items
+				cursor: pointer
+				&:hover
+					color: #A30C33
+				&.active span
+					border-bottom: 3px solid #a30c33
+				&:not(:last-child)
+					margin-right: 30px
+				& span
+					font-size: 18px
+					line-height: 20px
+
+					padding-bottom: 24px
+					
+		.accordeon
+			width: 100%
+			max-width: 1250px
+
+			top: 102px
+
+			padding: 30px 68.5px
+
+			&__list
+				grid-template-columns: repeat(8, auto)
+				gap: 20px
+
+			&-items
+
+				&__head
+					margin-bottom: 15px
+				
+				&__span
+					font-size: 18px
+					cursor: default
+
+					margin-right: 0
+					& br
+						display: none
+					&:hover
+						color: #A30C33
+				
+				&__img
+					display: none
+
+				&__body
+					max-height: none
+
+				&__links
+					&:not(:last-child)
+						margin-bottom: 10px
+					& a
+						font-size: 18px
+						line-height: 120%
+						letter-spacing: 1.8px
+					
+		&__content
+			max-width: 1190px
+			height: 604px
+
+			margin: 0 auto
+
+		&__map
+			overflow: auto
+			& img
+				&:first-child
+					display: none
+				&:last-child
+					display: block
 
 
+	/* MISSIONS */
+	.missions
+		padding: 140px 70px
 
+		&__title
+
+			margin-bottom: 40px
+
+		&__text
+			font-size: 32px
+			line-height: 150%
+
+		&__bg
+			top: 49px
+
+			height: 376px
+			&:nth-child(2)
+				left: -49px
+			&:last-child
+				right: -54px
+
+
+	/* WAYS */
+	.ways
+
+		&__container
+			padding: 0
+
+		&__content
+			grid-template-columns: repeat(2, 1fr)
+			gap: 20px
+
+		&__items
+			min-height: 260px
+
+			overflow: hidden
+			&:hover .wrapper
+				top: 0
+		
+		&__bg::after
+			display: none
+		
+		.wrapper
+			position: absolute
+			left: 0
+			top: 180px
+
+			width: 100%
+			height: 100%
+
+			transition: 0.3s ease
+			padding: 0
+			background-color: $bgColor
+
+			&__head
+				padding: 28px 20px
+				& span
+					white-space: nowrap
+					font-size: 24px
+			
+			&__arrow
+				display: none
+
+			&__body
+				max-height: none
+				padding:  0 115px 0 20px
+				& p
+					font-size: 17px
+
+
+	/* PACKAGE */
+	.package
+		padding: 65px 0 
+
+		&__container
+			max-width: 1110px
+
+			padding: 80px 0
+			
+
+		&-cotainer__header
+			margin-bottom: 50px !important
+
+		&__list
+			margin-bottom: 70px
+
+		&__items
+			width: 178px
+
+			margin-bottom: 0 !important
+			&:not(:last-child)
+				margin-right: 17px
+			& span
+				font-size: 18px
+
+		&__shape
+			width: 110px
+			height: 110px
+
+			margin-bottom: 10px
+
+		&__img
+			width: 48px
+			height: 48px
+		
+		.lti
+			width: 66px
+
+		hr
+			max-width: 1050px
+
+			margin-bottom: 70px
+
+		.additional
+			margin-bottom: 0
+
+			&-package-cotainer__header
+				margin-bottom: 50px
+				& span
+					font-size: 40px
+
+			&-package__title
+				font-size: 40px
+
+			&-items
+				width: 110px
+				&:not(:last-child)
+					margin-right: 80px
+
+
+	/* CORPORATE */
+	.corporate
+		padding-top: 34px
+
+		&__container
+			max-width: 1110px
+
+		&-container__header
+			margin-bottom: 44px
+
+		&__content
+			position: relative
+
+		&__nav
+			position: absolute
+			top: -93px
+			right: 0
+
+			display: flex
+
+		.swiper-button-prev,
+		.swiper-button-next
+			position: static
+			width: 56px
+			height: 56px
+
+			margin: 0
+			border-radius: 50%
+			background-color: #F0F0F0
+			transition: 0.3s ease
+			&:hover
+				opacity: 0.6
+			&:not(:last-child)
+				margin-right: 20px
+			&::after
+				font-size: 20px
+				font-weight: 700
+				color: #A30C33
+
+		.swiper-wrapper
+			margin-bottom: 33px
+
+		.swiper-slide
+			height: 834px !important
+
+		.swiper-pagination
+			display: block
+
+			position: static
+
+		.swiper-pagination-bullet
+			width: 214px
+			height: 6px
+
+			border-radius: 0
+			margin: 0 !important
+			&:not(:last-child)
+				margin-right: 10px !important
+
+		.swiper-pagination-bullet-active
+			background-color: #A30C33
 
 

@@ -1,10 +1,6 @@
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Regular.eot');
-  src: url('../fonts/ProximaNova-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/ProximaNova-Regular.woff') format('woff'),
-    url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+  src: url('../fonts/ProximaNovaRegular.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -12,47 +8,7 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/ProximaNova-Semibold.eot');
-  src: url('../fonts/ProximaNova-Semibold.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/ProximaNova-Semibold.woff') format('woff'),
-    url('../fonts/ProximaNova-Semibold.ttf') format('truetype');
-  font-display: swap;
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Condensed';
-  src: url('../fonts/ProximaNovaCond-Regular.eot');
-  src: url('../fonts/ProximaNovaCond-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/ProximaNovaCond-Regular.woff') format('woff'),
-    url('../fonts/ProximaNovaCond-Regular.ttf') format('truetype');
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Condensed';
-  src: url('../fonts/ProximaNovaCond-Semibold.eot');
-  src: url('../fonts/ProximaNovaCond-Semibold.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/ProximaNovaCond-Semibold.woff') format('woff'),
-    url('../fonts/ProximaNovaCond-Semibold.ttf') format('truetype');
-  font-display: swap;
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Proxima Nova Condensed';
-  src: url('../fonts/ProximaNovaCond-Bold.eot');
-  src: url('../fonts/ProximaNovaCond-Bold.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/ProximaNovaCond-Bold.woff') format('woff'),
-    url('../fonts/ProximaNovaCond-Bold.ttf') format('truetype');
+  src: url('../fonts/ProximaNovaSemibold.woff2') format('woff2');
   font-display: swap;
   font-weight: 600;
   font-style: normal;
@@ -60,11 +16,31 @@
 
 @font-face {
   font-family: 'Proxima Nova Condensed';
-  src: url('../fonts/ProximaNovaCond-Black.eot');
-  src: url('../fonts/ProximaNovaCond-Black.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/ProximaNovaCond-Black.woff') format('woff'),
-    url('../fonts/ProximaNovaCond-Black.ttf') format('truetype');
+  src: url('../fonts/ProximaNovaCondRegular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Condensed';
+  src: url('../fonts/ProximaNovaCondSemibold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Condensed';
+  src: url('../fonts/ProximaNovaCondBold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Condensed';
+  src: url('../fonts/ProximaNovaCondBlack.woff2') format('woff2');
   font-display: swap;
   font-weight: 900;
   font-style: normal;

@@ -7,10 +7,15 @@
     <title>SOFTLINE</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header" data-aos="fade-in">
       <a href="index.html" class="header__logo">
         <img src="icons/logo.png" alt="logo" />
       </a>
@@ -34,7 +39,7 @@
     </header>
 
     <!-- INTRO -->
-    <section class="intro">
+    <section class="intro" data-aos="fade-in">
       <div class="container intro--container">
         <div class="intro__offer">
           <h1>
@@ -46,7 +51,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about">
+    <section class="about" data-aos="fade-in">
       <div class="container">
         <div class="about__description">
           <p class="text">
@@ -60,32 +65,601 @@
 
         <div class="about__stats">
           <ul>
-            <li class="about__items">
-              <span class="about__value">>30 лет</span>
-              <span class="about__value-description">на IT-рынке</span>
+            <li>
+              <div class="about__items">
+                <span class="about__value">>30 лет</span>
+                <span class="about__value-description">на IT-рынке</span>
+              </div>
             </li>
-            <li class="about__items">
-              <span class="about__value">4600</span>
-              <span class="about__value-description">сотрудников в России</span>
+            <li>
+              <div class="about__items">
+                <span class="about__value">4600</span>
+                <span class="about__value-description"
+                  >сотрудников в России</span
+                >
+              </div>
             </li>
-            <li class="about__items">
-              <span class="about__value">25</span>
-              <span class="about__value-description">городов России</span>
+            <li>
+              <div class="about__items">
+                <span class="about__value">25</span>
+                <span class="about__value-description">городов России</span>
+              </div>
             </li>
-            <li class="about__items">
-              <span class="about__value">2000+</span>
-              <span class="about__value-description">разработчиков</span>
+            <li>
+              <div class="about__items">
+                <span class="about__value">2000+</span>
+                <span class="about__value-description">разработчиков</span>
+              </div>
             </li>
-            <li class="about__items">
-              <span class="about__value">3000+</span>
-              <span class="about__value-description"
-                >сотрудников ежегодно <br />
-                проходят оценку и обучение</span
-              >
+            <li>
+              <div class="about__items">
+                <span class="about__value">3000+</span>
+                <span class="about__value-description"
+                  >сотрудников ежегодно <br />
+                  проходят оценку и обучение</span
+                >
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
+
+    <!-- OFFICES -->
+    <section class="offices" data-aos="fade-in">
+      <div class="container offices__container">
+        <div class="offices__header">
+          <div class="filter">
+            <div class="filter__head">
+              <span>Офисы Softline</span>
+              <div class="filter__arrow"></div>
+            </div>
+
+            <ul class="filter__body">
+              <li class="filter__items active" data-filter="all">
+                <span>Все</span>
+              </li>
+              <li class="filter__items" data-filter="moscow">
+                <span>Москва</span>
+              </li>
+              <li class="filter__items" data-filter="center">
+                <span>Центр</span>
+              </li>
+              <li class="filter__items" data-filter="noth-west">
+                <span>Северо-Запад</span>
+              </li>
+              <li class="filter__items" data-filter="south">
+                <span>Юг</span>
+              </li>
+              <li class="filter__items" data-filter="volga">
+                <span>Волга</span>
+              </li>
+              <li class="filter__items" data-filter="ural">
+                <span>Урал</span>
+              </li>
+              <li class="filter__items" data-filter="siberia">
+                <span>Сибирь</span>
+              </li>
+              <li class="filter__items" data-filter="far-east">
+                <span>Дальний Восток</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="accordeon">
+            <ul class="accordeon__list">
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Москва</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Москва</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Центр</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Воронеж</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Ярославль</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Белгород</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Северо-Запад</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Санкт-Петербург</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Калининград</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Юг</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Ростов-на-Дону</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Краснодар</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Волгоград</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Волга</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Казань</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Самара</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Уфа</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Оренбург</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Нижний Новгород</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Урал</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Екатиринбург</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Челябинск</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Пермь</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Сургут</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Тюмень</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Ижевск</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span">Сибирь</span>
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Новосибирск</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Омск</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Томск</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Красноярск</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Иркутск</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordeon-items">
+                <div class="accordeon-items__head">
+                  <span class="accordeon-items__span"
+                    >Дальний <br />
+                    Восток</span
+                  >
+                  <div class="accordeon-items__img">
+                    <img src="icons/arrow2.png" alt="" />
+                  </div>
+                </div>
+
+                <ul class="accordeon-items__body">
+                  <li class="accordeon-items__links">
+                    <a href="#">Хабаровск</a>
+                  </li>
+                  <li class="accordeon-items__links">
+                    <a href="#">Владивосток</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="offices__content">
+          <div class="offices__map all active">
+            <img src="img/maps/map290.png" alt="" />
+            <img src="img/maps/map.png" alt="" />
+          </div>
+          <div class="offices__map moscow">
+            <img src="img/maps/map290moscow.png" alt="" />
+            <img src="img/maps/mapMoscow.png" alt="" />
+          </div>
+          <div class="offices__map center">
+            <img src="img/maps/map290center.png" alt="" />
+            <img src="img/maps/mapCenter.png" alt="" />
+          </div>
+          <div class="offices__map noth-west">
+            <img src="img/maps/map290north-west.png" alt="" />
+            <img src="img/maps/mapNorth-west.png" alt="" />
+          </div>
+          <div class="offices__map south">
+            <img src="img/maps/map290south.png" alt="" />
+            <img src="img/maps/mapSouth.png" alt="" />
+          </div>
+          <div class="offices__map volga">
+            <img src="img/maps/map290volga.png" alt="" />
+            <img src="img/maps/mapVolga.png" alt="" />
+          </div>
+          <div class="offices__map ural">
+            <img src="img/maps/map290ural.png" alt="" />
+            <img src="img/maps/mapUral.png" alt="" />
+          </div>
+          <div class="offices__map siberia">
+            <img src="img/maps/map290siberia.png" alt="" />
+            <img src="img/maps/mapSiberia.png" alt="" />
+          </div>
+          <div class="offices__map far-east">
+            <img src="img/maps/map290far-east.png" alt="" />
+            <img src="img/maps/mapFar-east.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSIONS -->
+    <div class="container missions" data-aos="fade-in">
+      <div class="missons__content">
+        <h2 class="missions__title title">Миссия Softline</h2>
+        <p class="missions__text">
+          Мы&nbsp;помогаем организациям трансформироваться, работать эффективно
+          и&nbsp;безопасно в&nbsp;условиях цифровой экономики.
+        </p>
+      </div>
+      <div class="missions__bg">
+        <img src="img/leftPattern.png" alt="" />
+      </div>
+      <div class="missions__bg">
+        <img src="img/rightPattern.png" alt="" />
+      </div>
+    </div>
+
+    <!-- WAYS -->
+    <section class="ways" data-aos="fade-in">
+      <div class="container ways__container">
+        <div class="container__header">
+          <h2 class="title">Направления бизнеса</h2>
+        </div>
+
+        <ul class="ways__content">
+          <li class="ways__items">
+            <div class="ways__bg">
+              <img src="img/theWayOfBusiness/img1.png" alt="" />
+            </div>
+            <div class="wrapper">
+              <div class="wrapper__head">
+                <span>Решения Softline</span>
+                <div class="wrapper__arrow"></div>
+              </div>
+
+              <div class="wrapper__body">
+                <p>
+                  ГК&nbsp;Softline предлагает клиентам собственную линейку
+                  оборудования (ПК, серверы, торговое оборудование
+                  и&nbsp;проч.), разработку программных продуктов, облачных
+                  решений, решений в&nbsp;области информационной безопасности.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="ways__items">
+            <div class="ways__bg">
+              <img src="img/theWayOfBusiness/img2.png" alt="" />
+            </div>
+            <div class="wrapper">
+              <div class="wrapper__head">
+                <span>Кибербезопасность</span>
+                <div class="wrapper__arrow"></div>
+              </div>
+
+              <div class="wrapper__body">
+                <p>
+                  Softline обладает всеми необходимыми государственными
+                  лицензиями для организации проектов по&nbsp;информационной
+                  безопасности и&nbsp;аттестации.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="ways__items">
+            <div class="ways__bg">
+              <img src="img/theWayOfBusiness/img3.png" alt="" />
+            </div>
+            <div class="wrapper">
+              <div class="wrapper__head">
+                <span>Импортозамещение</span>
+                <div class="wrapper__arrow"></div>
+              </div>
+
+              <div class="wrapper__body">
+                <p>
+                  ГК&nbsp;Softline обладает широчайшим портфелем решений
+                  и&nbsp;услуг для импортозамещения, включая&nbsp;ПО
+                  и&nbsp;оборудование собственного производства.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="ways__items">
+            <div class="ways__bg">
+              <img src="img/theWayOfBusiness/img4.png" alt="" />
+            </div>
+            <div class="wrapper">
+              <div class="wrapper__head">
+                <span>Облачные решения</span>
+                <div class="wrapper__arrow"></div>
+              </div>
+
+              <div class="wrapper__body">
+                <p>
+                  Softline использует современные облачные решения как
+                  российских, так и&nbsp;международных вендоров для
+                  масштабирования бизнеса своих клиентов. Подписки, услуги,
+                  трансформация.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="ways__items">
+            <div class="ways__bg">
+              <img src="img/theWayOfBusiness/img5.png" alt="" />
+            </div>
+            <div class="wrapper">
+              <div class="wrapper__head">
+                <span>Цифровая трансформация и&nbsp;разработка&nbsp;ПО</span>
+                <div class="wrapper__arrow"></div>
+              </div>
+
+              <div class="wrapper__body">
+                <p>
+                  Softline использует современные технологи и&nbsp;новые
+                  возможности для увеличения производительности бизнеса
+                  заказчика. В&nbsp;штате ГК&nbsp;Softline&nbsp;&mdash;
+                  2000+&nbsp;разработчиков, которые трансформируют&nbsp;ПО под
+                  нужды конкретного предприятия.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="ways__items">
+            <div class="ways__bg">
+              <img src="img/theWayOfBusiness/img6.png" alt="" />
+            </div>
+            <div class="wrapper">
+              <div class="wrapper__head">
+                <span>Техническая поддержка Softline</span>
+                <div class="wrapper__arrow"></div>
+              </div>
+
+              <div class="wrapper__body">
+                <p>
+                  200+&nbsp;инженеров, 24&nbsp;часа в&nbsp;сутки, 7&nbsp;дней
+                  в&nbsp;неделю, 12&nbsp;месяцев в&nbsp;году, сервисное
+                  партнерство с&nbsp;30+&nbsp;мировыми производителями.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PACKAGE -->
+    <section class="package" data-aos="fade-in">
+      <div class="container package__container">
+        <div class="container__header package-cotainer__header">
+          <h2 class="title">Компенсационный пакет</h2>
+        </div>
+
+        <ul class="package__list main">
+          <li class="package__items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/dms.png" alt="" />
+              </div>
+            </div>
+            <span>ДМС</span>
+          </li>
+
+          <li class="package__items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/holiday.png" alt="" />
+              </div>
+            </div>
+            <span
+              >Выходной <br />
+              в день рождения</span
+            >
+          </li>
+
+          <li class="package__items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/connection.png" alt="" />
+              </div>
+            </div>
+            <span>Корпоративная мобильная&nbsp;связь</span>
+          </li>
+
+          <li class="package__items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/sport.png" alt="" />
+              </div>
+            </div>
+            <span>Корпоративные скидки на&nbsp;спорт</span>
+          </li>
+
+          <li class="package__items">
+            <div class="package__shape">
+              <div class="package__img lti">
+                <img src="icons/lti.png" alt="" />
+              </div>
+            </div>
+            <span>LTI</span>
+          </li>
+        </ul>
+
+        <hr />
+
+        <div class="container__header additional-package-cotainer__header">
+          <h2 class="title additional-package__title">
+            Программа дополнительной мотивации
+          </h2>
+          <span>доплата 12% от суммы</span>
+        </div>
+
+        <ul class="package__list additional">
+          <li class="package__items additional-items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/equipment.png" alt="" />
+              </div>
+            </div>
+            <span>Оргтехники</span>
+          </li>
+
+          <li class="package__items additional-items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/dms.png" alt="" />
+              </div>
+            </div>
+            <span>ДМС</span>
+          </li>
+
+          <li class="package__items additional-items">
+            <div class="package__shape">
+              <div class="package__img">
+                <img src="icons/mortgage.png" alt="" />
+              </div>
+            </div>
+            <span>Ипотеки</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CORPORATE -->
+    <section class="corporate" data-aos="fade-in">
+      <div class="container corporate__container">
+        <div class="container__header corporate-container__header">
+          <h2 class="title corporate__title">Корпоративная жизнь</h2>
+        </div>
+
+        <div class="corporate__content">
+          <div class="corporate__nav">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/slider/slide1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slider/slide2.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slider/slide3.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slider/slide4.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slider/slide5.png" alt="" />
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
